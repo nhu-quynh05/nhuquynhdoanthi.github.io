@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>THIẾT KẾ NỘI THẤT ĐOÀN QUỲNH – Kiến Tạo Không Gian Hiện Đại, Đậm Chất Riêng</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Chuyên thiết kế nội thất cao cấp - THIẾT KẾ NỘI THẤT ĐOÀN QUỲNH. Kiến tạo không gian hiện đại, đậm chất riêng. Dự án,  blog, dịch vụ và chăm sóc khách hàng." />
+  <style>
+    /* ---------------- Reset & basics ---------------- */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background:#313133; color:#e8e3e3; line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img{max-width:70%;display:block}
+    
+    /* ---------------- Navbar ---------------- */
+    .navbar{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;align-items:center;padding:14px 6%;background:rgba(0,0,0,0.45);backdrop-filter: blur(4px);border-bottom:1px solid rgba(255,255,255,0.03)}
+    .brand{display:flex;align-items:center;gap:12px}
+    /* small corner logo SVG */
+    .brand svg{width:46px;height:46px;display:block}
+    .brand .title{color:#f3d27a;font-weight:500;letter-spacing:1px}
+    .nav {list-style:none;display:flex;gap:18px;align-items:center}
+    .nav a{padding:8px 12px;border-radius:8px;font-weight:600;transition:all .22s}
+    .nav a:hover{background:#f3d27a;color:#111}
+
+    /* search box */
+    .search {display:flex;align-items:center;gap:8px}
+    .search input{padding:8px 10px;border-radius:8px;border:none;background:rgba(255,255,255,0.06);color:#fff;outline:none;width:180px}
+    .search button{padding:8px 10px;border-radius:8px;border:none;background:#f3d27a;color:#111;font-weight:700;cursor:pointer}
+
+    /* ---------------- Hero ---------------- */
+    .hero{padding:150px 6% 80px;text-align:center}
+    .hero .h1{font-family:"Playfair Display", serif;font-size:clamp(34px,6vw,64px);color:#f3d27a;letter-spacing:2px;margin-bottom:8px;transform-origin:center}
+    .hero .lead{font-size:clamp(14px,1.6vw,18px);color:#fff8e6;font-style:italic;margin-bottom:18px}
+    .hero .cta{display:inline-block;background:#f3d27a;color:#111;padding:12px 26px;border-radius:30px;font-weight:700;transition:transform .2s}
+    .hero .cta:hover{transform:translateY(-5px)}
+
+    /* wrapper */
+    .wrap{max-width:1200px;margin:20px auto;padding:0 6%}
+
+    /* ---------------- Sections ---------------- */
+    section.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:34px;margin:30px 0;box-shadow:0 12px 30px rgba(0,0,0,0.6)}
+    h2.section-title{color:#f3d27a;text-align:center;margin-bottom:12px;font-size:28px}
+    p.lead{color:#eee;text-align:center;max-width:980px;margin:0 auto 16px;font-size:16px}
+
+    /* ---------------- Projects / Gallery ---------------- */
+    .filters{display:flex;gap:12px;justify-content:center;margin:12px 0 20px;flex-wrap:wrap}
+    .filters button{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff;padding:8px 12px;border-radius:10px;cursor:pointer}
+    .filters button.active{background:#f3d27a;color:#111;border-color:#f3d27a;font-weight:700}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .card{background:rgba(255,255,255,0.04);border-radius:12px;overflow:hidden;transition:transform .36s, box-shadow .36s}
+    .card:hover{transform:translateY(-8px);box-shadow:0 18px 50px rgba(0,0,0,0.6)}
+    .card img{height:200px;object-fit:cover;transition:transform .6s}
+    .card:hover img{transform:scale(1.06)}
+    .card .meta{padding:12px}
+    .card .meta h3{color:#f3d27a;margin-bottom:6px;font-size:18px}
+    .card .meta p{color:#eee;font-size:14px;opacity:.95}
+
+
+    /* ---------------- Blog ---------------- */
+    .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .post{background:rgba(255,255,255,0.03);border-radius:10px;overflow:hidden}
+    .post img{height:160px;object-fit:cover}
+    .post .body{padding:12px}
+    .post h4{color:#f3d27a;margin-bottom:6px}
+    .post p{color:#eee;font-size:14px}
+
+    /* ---------------- Reviews / Services ---------------- */
+    .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .review{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px}
+    .stars{color:#f3d27a;margin-bottom:8px}
+    .services-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .service{background:rgba(255,255,255,0.03);padding:14px;border-radius:10px}
+
+    /* form */
+    .form-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+    input,textarea,select{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:#fff;outline:none}
+    textarea{min-height:120px;resize:vertical}
+
+    /* ---------------- Lightbox ---------------- */
+    .lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.9);z-index:9999;padding:30px}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:92%;max-height:86vh;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,0.7)}
+    .lightbox .caption{color:#fff;margin-top:12px;text-align:center}
+    .lightbox .close{position:absolute;top:18px;right:20px;background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.14);padding:8px 10px;border-radius:8px;cursor:pointer}
+
+    /* ---------------- Footer ---------------- */
+    footer{padding:22px 6%;text-align:center;color:#bfbfbf;background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.7));margin-top:30px;border-top:1px solid rgba(255,255,255,0.03)}
+
+    /* ---------------- Animations ---------------- */
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+    .panel-anim{animation:fadeInUp .9s ease both}
+
+    /* responsive tweaks */
+    @media (max-width:700px){
+      .search input{width:110px}
+      .hero{padding:120px 6% 60px}
+      .card img{height:160px}
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Background video + overlay -->
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="https://cdn.coverr.co/videos/coverr-luxury-apartment-9925/1080p.mp4" type="video/mp4">
+  </video>
+  <div class="bg-overlay"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="brand" aria-hidden="false">
+      <!-- SVG logo small corner (you can replace by <img src="logo.png"> ) -->
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#f7dd9a"/><stop offset="1" stop-color="#f0c14b"/></linearGradient></defs>
+        <circle cx="50" cy="50" r="44" stroke="url(#g1)" stroke-width="4" fill="none"/>
+        <text x="50%" y="55%" text-anchor="middle" fill="url(#g1)" font-size="34" font-weight="700" font-family="Georgia, serif">DQ</text>
+      </svg>
+      <div class="title">THIẾT KẾ NỘI THẤT ĐOÀN QUỲNH</div>
+    </div>
+
+    <nav>
+      <ul class="nav" role="navigation" aria-label="Main menu">
+        <li><a href="#home">Trang Chủ</a></li>
+        <li><a href="#about">Giới Thiệu</a></li>
+        <li><a href="#projects">Dự Án</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#reviews">Đánh Giá</a></li>
+        <li><a href="#services">Dịch Vụ</a></li>
+        <li><a href="#contact">Liên Hệ</a></li>
+      </ul>
+    </nav>
+
+    <div class="search" role="search">
+      <input id="site-search" placeholder="Tìm kiếm dự án/ bài viết..." />
+      <button id="btn-search">Tìm</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="home" class="hero" role="main">
+    <div class="h1 hero h1">THIẾT KẾ NỘI THẤT ĐOÀN QUỲNH</div>
+    <div class="lead hero lead">✨ Kiến Tạo Không Gian Hiện Đại, Đậm Chất Riêng ✨</div>
+    <a class="cta hero-cta" href="#projects">Xem Dự Án Tiêu Biểu</a>
+  </main>
+
+  <!-- ABOUT -->
+  <div class="wrap">
+    <section id="about" class="panel panel-anim" aria-labelledby="about-heading">
+      <h2 class="section-title" id="about-heading">Giới Thiệu</h2>
+      <p class="lead">
+        <strong>THIẾT KẾ NỘI THẤT ĐOÀN QUỲNH </strong> — 
+        Chúng tôi kiến tạo những không gian sống vượt thời gian: tinh tế, sang trọng và tràn đầy cảm xúc.  
+        Mỗi bản thiết kế là một tác phẩm, được chạm khắc bởi con mắt thẩm mỹ tỉ mỉ và lựa chọn vật liệu cao cấp.  
+        Với sứ mệnh nâng tầm giá trị sống, Đoàn Quỳnh biến tổ ấm thành tuyên ngôn phong cách dành cho chủ nhân.
+      </p>
+      <p class="lead">
+        Từ căn hộ đô thị đến biệt thự, từ showroom đến không gian thương mại — chúng tôi đồng hành từ ý tưởng đến hiện thực,  
+        đảm bảo thẩm mỹ hoàn hảo, công năng tối ưu và tiến độ chuyên nghiệp.
+      </p>
+    </section>
+  </div>
+
+  <!-- PROJECTS with filters & 10+ images -->
+  <div class="wrap">
+    <section id="projects" class="panel panel-anim" aria-labelledby="projects-heading">
+      <h2 class="section-title" id="projects-heading">Dự Án & Hạng Mục</h2>
+      <p class="lead">Dự án được phân loại theo hạng mục — bạn có thể lọc hoặc xem toàn bộ bộ sưu tập nội thất cao cấp.</p>
+
+      <div class="filters" role="toolbar" aria-label="Filter projects">
+        <button class="filter-btn active" data-filter="all">Tất cả</button>
+        <button class="filter-btn" data-filter="living">Phòng Khách</button>
+        <button class="filter-btn" data-filter="bed">Phòng Ngủ</button>
+        <button class="filter-btn" data-filter="kitchen">Phòng Bếp</button>
+        <button class="filter-btn" data-filter="office">Văn Phòng</button>
+        <button class="filter-btn" data-filter="villa">Biệt Thự</button>
+          <button class="filter-btn" data-filter="villa">Phòng Tắm</button>
+      </div>
+
+      <div id="grid" class="grid" aria-live="polite">
+
+        <!-- Cards: each has data-category for filtering. Images are luxury interior from Unsplash -->
+        <article class="card tile" data-category="living" data-title="Phòng khách - Dự án Hà Nội" data-src="img/12-thiet-ke-noi-that-phong-khach-2.jpg">
+          <img src="img/12-thiet-ke-noi-that-phong-khach-2.jpg" alt="Phòng khách sang trọng">
+          <div class="meta">
+            <h3>Phòng khách sang trọng</h3>
+            <p>Không gian mở, sofa da cao cấp và điểm nhấn nghệ thuật.</p>
+          </div>
+        </article>
+
+        <article class="card tile" data-category="kitchen" data-title="Bếp - Căn hộ cao cấp" data-src="https://duopig.com/wp-content/uploads/2020/04/Duopig-Project-Rosita-Garden-2-scaled.jpg">
+          <img src ="https://duopig.com/wp-content/uploads/2020/04/Duopig-Project-Rosita-Garden-2-scaled.jpg">
+          <div class="meta"><h3>Phòng bếp hiện đại</h3><p>Thiết kế tối giản, vật liệu cao cấp.</p></div>
+        </article>
+
+        <article class="card tile" data-category="office" data-title="Văn phòng - Không gian sáng tạo" data-src="img/thiet-ke-noi-that-van-phong-2.jpg">
+          <img src="img/thiet-ke-noi-that-van-phong-2.jpg" alt="Phòng làm việc hiện đại">
+          <div class="meta"><h3>Văn phòng sáng tạo</h3><p>Bàn gỗ, ánh sáng và bố cục tối ưu hiệu suất.</p></div>
+        </article>
+
+        <article class="card tile" data-category="villa" data-title="Biệt thự - Dự án Vinhomes" data-src="img/noi-that-biet-thu-tien-giang-1-tret-anh-toan-16.jpg">
+          <img src="img/noi-that-biet-thu-tien-giang-1-tret-anh-toan-16.jpg" alt="Phòng giải trí đẳng cấp">
+          <div class="meta"><h3>Biệt thự đẳng cấp</h3><p>Hệ thống giải trí, nội thất bespoke.</p></div>
+        </article>
+
+         <article class="card tile" data-category="living" data-title="C:\Users\DOAN QUYNH\OneDrive\Desktop\NHUQUYNHTH28.09\img\thiet-ke-thi-cong-can-ho-zeit-river-thu-thiem-wc-phong-ngu-master-09-1.jpg">
+          <img src="C:\Users\DOAN QUYNH\OneDrive\Desktop\NHUQUYNHTH28.09\img\thiet-ke-thi-cong-can-ho-zeit-river-thu-thiem-wc-phong-ngu-master-09-1.jpg" alt=" Bathroom">
+          <div class="meta"><h3>Phòng khách Tắm</h3><p>Sự sang chảnh trong từng đường nét .</p></div>
+        </article>
+
+        <article class="card tile" data-category="living" data-title="img/thiet-ke-nha-pho-dong-nai-chi-nga-2-tang-12.jpg">
+          <img src="img/thiet-ke-nha-pho-dong-nai-chi-nga-2-tang-12.jpg" alt="Living minimal">
+          <div class="meta"><h3>Phòng khách tone minimal</h3><p>Sự tinh giản trong từng chi tiết.</p></div>
+        </article>
+
+        <article class="card tile" data-category="bed" data-title="Phòng ngủ - Resort style" data-src="img/z2-768x400.jpg" >
+        <img src="img/z2-768x400.jpg" alt="Phòng ngủ resort style">
+          <div class="meta"><h3>Phòng ngủ resort style</h3><p>Không gian thư giãn như nghỉ dưỡng.</p></div>
+        </article>
+
+        <article class="card tile" data-category="kitchen" data-title="Bếp - Island kitchen" data-src="img/Nha-pho-Binh-Duong_anh-Dat_2-tang-8-768x614.jpg">
+          <img src="img/Nha-pho-Binh-Duong_anh-Dat_2-tang-8-768x614.jpg" alt="Bếp island">
+          <div class="meta"><h3>Bếp Island</h3><p>Bếp hiện đại với đảo bếp trung tâm.</p></div>
+        </article>
+
+        <article class="card tile" data-category="office" data-title="Showroom - Trưng bày" data-src="img/phong-cach-thiet-ke-showroom-1.png">
+          <img src="img/phong-cach-thiet-ke-showroom-1.png" alt="Showroom high-end">
+          <div class="meta"><h3>Showroom cao cấp</h3><p>Trưng bày sản phẩm & trải nghiệm khách hàng.</p></div>
+        </article>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- BLOG -->
+  <div class="wrap">
+    <section id="blog" class="panel panel-anim">
+      <h2 class="section-title">Blog & Xu hướng</h2>
+      <p class="lead">Cập nhật những xu hướng thiết kế nội thất cao cấp, mẹo chọn vật liệu và case study.</p>
+      <div class="blog-grid">
+        <article class="post">
+          <img src="C:\Users\DOAN QUYNH\OneDrive\Desktop\NHUQUYNHTH28.09\img\cac-phong-cach-thiet-ke-noi-that.jpg" alt="Bài viết">
+          <div class="body">
+            <h4>5 Xu hướng nội thất 2025</h4>
+            <p>Đánh giá những xu hướng sang trọng: tone màu, vật liệu, lighting và layout tối ưu.</p>
+          </div>
+        </article>
+        <article class="post">
+          <img src="C:\Users\DOAN QUYNH\OneDrive\Desktop\NHUQUYNHTH28.09\img\O1CN015MSRKL25ZNMwCDGah_2219345657540-0-cib-768x768.jpg" alt="Bài">
+          <div class="body"><h4>Chọn sofa phù hợp</h4><p>Mẹo chọn sofa, vải & kích thước cho phòng khách.</p></div>
+        </article>
+        <article class="post">
+          <img src="C:\Users\DOAN QUYNH\OneDrive\Desktop\NHUQUYNHTH28.09\img\thiet-ke-nha-pho-dong-nai-chi-nga-2-tang-15.jpg" alt="Bài 3">
+          <div class="body"><h4>Ánh sáng - Tâm điểm</h4><p>Lựa chọn đèn cho không gian sang trọng và ấm cúng.</p></div>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <!-- REVIEWS & REFERRAL -->
+  <div class="wrap">
+    <section id="reviews" class="panel panel-anim">
+      <h2 class="section-title">Đánh Giá Khách Hàng & Người Tham Khảo</h2>
+      <p class="lead">Phần đánh giá thật từ khách hàng và form để người tham khảo/giới thiệu để lại thông tin.</p>
+
+      <div class="reviews-grid">
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <strong>Nguyễn A. — Chủ nhà biệt thự</strong>
+          <p>“Thiết kế tinh tế, tiến độ đúng hạn. Đoàn Quỳnh biến không gian mơ ước thành hiện thực.”</p>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <strong>Trần B. — Chủ căn hộ penthouse</strong>
+          <p>“Chuyên nghiệp, tư vấn tỉ mỉ, chất lượng thi công vượt mong đợi.”</p>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★☆</div>
+          <strong>Ngô C. — Chủ showroom</strong>
+          <p>“Sản phẩm hoàn thiện đẹp, phù hợp thương hiệu.”</p>
+        </div>
+      </div>
+
+      <!-- Referral / who to contact -->
+      <div style="margin-top:18px">
+        <h3 style="color:#f3d27a;margin-bottom:8px">Người tham khảo / Giới thiệu</h3>
+        <form id="referral-form" onsubmit="return false;">
+          <div class="form-row">
+            <input name="ref-name" placeholder="Tên người giới thiệu" required>
+            <input name="ref-phone" placeholder="SĐT / Zalo" required>
+            <input name="ref-email" placeholder="Email">
+          </div>
+          <div style="margin-top:10px;">
+            <textarea name="ref-note" placeholder="Ghi chú (ví dụ: họ quan tâm hạng mục nào)"></textarea>
+          </div>
+          <div style="margin-top:10px;text-align:right">
+            <button style="background:#f3d27a;color:#111;padding:10px 16px;border-radius:8px;border:none;font-weight:700;cursor:pointer" onclick="alert('Cảm ơn! Thông tin đã được gửi (demo).')">Gửi thông tin</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- SERVICES & CUSTOMER CARE -->
+  <div class="wrap">
+    <section id="services" class="panel panel-anim">
+      <h2 class="section-title">Dịch Vụ | Chăm Sóc Khách Hàng</h2>
+      <p class="lead">Chúng tôi cung cấp gói dịch vụ trọn gói và dịch vụ hậu mãi chuyên nghiệp.</p>
+
+      <div class="services-list">
+        <div class="service">
+          <h4 style="color:#f3d27a">Thiết Kế Nội Thất</h4>
+          <p>Concept – 3D – bản vẽ kỹ thuật, tư vấn vật liệu, hoàn thiện hồ sơ thi công.</p>
+        </div>
+        <div class="service">
+          <h4 style="color:#f3d27a">Thi Công Trọn Gói</h4>
+          <p>Thi công nội thất, giám sát chất lượng, nghiệm thu bàn giao.</p>
+        </div>
+        <div class="service">
+          <h4 style="color:#f3d27a">Tư Vấn Phong Thủy</h4>
+          <p>Hóa giải, bố trí không gian phù hợp mệnh – tuổi gia chủ (tùy chọn).</p>
+        </div>
+        <div class="service">
+          <h4 style="color:#f3d27a">Hậu Mãi & Bảo Hành</h4>
+          <p>Chăm sóc sau bàn giao, bảo hành đồ nội thất và các vấn đề kỹ thuật.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="wrap">
+    <section id="contact" class="panel panel-anim">
+      <h2 class="section-title">Liên Hệ</h2>
+      <p class="lead">Hãy cho chúng tôi biết yêu cầu — đội ngũ ĐOÀN QUỲNH sẽ liên hệ nhanh chóng.</p>
+
+      <form id="contact-form" onsubmit="return false;">
+        <div class="form-row">
+          <input name="name" placeholder="Họ và tên" required>
+          <input name="phone" placeholder="Số điện thoại / Zalo" required>
+        </div>
+        <div class="form-row" style="margin-top:10px">
+          <input name="email" placeholder="Email (nếu có)">
+          <select name="service">
+            <option value="">Chọn dịch vụ quan tâm</option>
+            <option>Thiết kế nội thất</option>
+            <option>Thi công trọn gói</option>
+            <option>Tư vấn phong thủy</option>
+            <option>Khảo sát & báo giá</option>
+          </select>
+        </div>
+        <div style="margin-top:10px">
+          <textarea name="message" placeholder="Mô tả ngắn về nhu cầu"></textarea>
+        </div>
+        <div style="margin-top:12px;text-align:right">
+          <button style="background:#f3d27a;color:#111;padding:10px 16px;border-radius:8px;border:none;font-weight:700;cursor:pointer" onclick="alert('Cảm ơn! (demo). Bạn đã gửi yêu cầu.')">Gửi yêu cầu</button>
+        </div>
+      </form>
+      <div style="margin-top:18px;color:#ddd">
+        <p>📍 Địa chỉ: 123 Đường Dương văn bé , Hà Nội</p>
+        <p>📞 Hotline: 0337434055 — Zalo/WhatsApp</p>
+        <p>✉️ Email: lienhe@doanquynh.com</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 ĐOÀN QUỲNH — Kiến Tạo Không Gian Hiện Đại, Đậm Chất Riêng · Thiết kế & thi công nội thất cao cấp
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-hidden="true">
+    <button class="close" aria-label="Đóng" onclick="closeLightbox()">ĐÓNG ✕</button>
+    <div>
+      <img id="lb-img" src="" alt="">
+      <div class="caption" id="lb-caption"></div>
+    </div>
+  </div>
+
+  <!-- ---------------- JavaScript: filtering, lightbox, search ---------------- -->
+  <script>
+    // Filter projects
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const grid = document.getElementById('grid');
+    const cards = document.querySelectorAll('#grid .tile');
+
+    document.querySelectorAll('.filter-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        cards.forEach(c=>{
+          if(f === 'all' || c.dataset.category === f) c.style.display = '';
+          else c.style.display = 'none';
+        });
+      });
+    });
+
+    // Lightbox: open when clicking .tile cards (works for grid and gallery)
+    const tiles = document.querySelectorAll('.tile, .card.tile');
+    const lightbox = document.getElementById('lightbox');
+    const lbimg = document.getElementById('lb-img');
+    const lbcap = document.getElementById('lb-caption');
+
+    function openLightbox(src, title){
+      lbimg.src = src;
+      lbimg.alt = title || '';
+      lbcap.textContent = title || '';
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden','false');
+    }
+    function closeLightbox(){
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden','true');
+      lbimg.src = '';
+    }
+
+    // attach click handlers (also support grid cards)
+    document.querySelectorAll('.tile, .card.tile').forEach(el=>{
+      el.addEventListener('click', ()=>{
+        const src = el.dataset.src || el.querySelector('img').src;
+        const title = el.dataset.title || el.querySelector('h3')?.innerText || '';
+        openLightbox(src, title);
+      });
+    });
+
+    // close handlers
+    document.querySelector('.lightbox .close').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e=>{ if(e.target===lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeLightbox(); });
+
+    // Search (simple client-side)
+    document.getElementById('btn-search').addEventListener('click', ()=>{
+      const q = document.getElementById('site-search').value.trim().toLowerCase();
+      if(!q) { alert('Nhập nội dung cần tìm.'); return; }
+      // search in titles and meta text across site: projects + blog
+      const hay = Array.from(document.querySelectorAll('.card .meta h3, .card .meta p, .post h4, .post p'));
+      let found = false;
+      hay.forEach(el=>{
+        if(el.innerText.toLowerCase().includes(q)){
+          el.scrollIntoView({behavior:'smooth',block:'center'});
+          el.style.outline = '3px solid rgba(243,210,122,0.6)';
+          setTimeout(()=>el.style.outline='none',2500);
+          found = true;
+        }
+      });
+      if(!found) alert('Không tìm thấy nội dung: ' + q);
+    });
+
+    // progressive image error handling: if image fails, replace with placeholder
+    document.querySelectorAll('img').forEach(img=>{
+      img.addEventListener('error', ()=>{ img.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500"><rect fill="#222" width="100%" height="100%"/><text x="50%" y="50%" fill="#888" font-size="20" text-anchor="middle" dy=".3em">Ảnh không tải được</text></svg>') });
+    });
+
+    // small accessibility: focus outlines for keyboard nav
+    document.addEventListener('keyup', e=>{ if(e.key==='Tab') document.body.classList.add('show-focus'); });
+
+  </script>
+</body>
+</html>
